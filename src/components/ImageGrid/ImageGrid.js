@@ -7,7 +7,7 @@ const generateData = () => {
   for (let i = 0; i < data.length; i++) {
     result[i] = {
       id: Math.floor(Math.random() * Math.floor(999)),
-      name: "http://via.placeholder.com/150x150",
+      name: "https://via.placeholder.com/150x150",
       type: "image/png"
     };
   }
