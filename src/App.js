@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Helmet from "react-helmet";
+import ImageGrid from "./components/ImageGrid/ImageGrid";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">WoordMaatje images</h1>
         </header>
+        <ImageGrid />
       </div>
     );
   }
