@@ -9,10 +9,15 @@ const ImageGrid = ({ images = [] }) => (
           className="image-grid-item"
           key={idx + file_name + entry_id + content_type}
         >
-          <img
-            src={`https://nl.knowblearticles.com/rest/imagesrv/${entry_id}/${file_name}`}
-            alt=""
-          />
+          <a
+            href={`https://nl.knowblearticles.com/rest/imagesrv/${entry_id}/${file_name}`}
+            target="_blank"
+          >
+            <img
+              src={`https://nl.knowblearticles.com/rest/imagesrv/${entry_id}/${file_name}`}
+              alt=""
+            />
+          </a>
         </div>
       ))}
     </div>

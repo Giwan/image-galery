@@ -1,15 +1,16 @@
 .image-grid__container {
   display: grid;
   grid-gap: 16px;
-  grid: auto-flow / repeat(4, 150px);
+  grid: auto-flow / repeat(3, 1fr);
   margin: 16px auto;
 }
 
-.image-gri-item {
+.image-grid-item {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  /* width: 350px; */
+  /* height: 350px; */
   border: 1px solid black;
+  overflow: hidden;
 }
 
 .container {
