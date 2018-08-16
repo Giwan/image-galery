@@ -4,7 +4,7 @@ import './SwfGrid.css';
 const SwfGrid = ({ images = [] }) => {
   return (
     <div>
-      <h1>Swiffy images</h1>
+      <h1>Swiffy images: {images.length}</h1>
       {images.map(({ entry_id, file_name }, idx) => {
         return (
           <ul key={idx + entry_id + file_name}>

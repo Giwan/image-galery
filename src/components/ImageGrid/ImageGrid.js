@@ -3,6 +3,7 @@ import './ImageGrid.css';
 
 const ImageGrid = ({ images = [] }) => (
   <div className="container">
+    <h1>images: {images.length}</h1>
     <div className="image-grid__container">
       {images.map(({ entry_id, file_name, content_type }, idx) => (
         <div
