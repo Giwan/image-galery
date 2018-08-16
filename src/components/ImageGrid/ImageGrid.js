@@ -1,28 +1,18 @@
 import React from "react";
 import "./ImageGrid.css";
 
-const generateData = () => {
-  const data = new Array(100);
-  const result = [];
-  for (let i = 0; i < data.length; i++) {
-    result[i] = {
-      id: Math.floor(Math.random() * Math.floor(999)),
-      name: "https://via.placeholder.com/150x150",
-      type: "image/png"
-    };
-  }
-
-  return result;
-};
-
-const images = generateData();
-
-const ImageGrid = () => (
+const ImageGrid = ({ images = [] }) => (
   <div className="container">
     <div className="image-grid__container">
-      {images.map(({ id, name, type }, idx) => (
-        <div className="image-grid-item" key={idx + name + id + type}>
-          <img src={name} />
+      {images.map(({ entry_id, file_name, content_type }, idx) => (
+        <div
+          className="image-grid-item"
+          key={idx + file_name + entry_id + content_type}
+        >
+          <img
+            src={`https://nl.knowblearticles.com/rest/imagesrv/${entry_id}/${file_name}`}
+            alt=""
+          />
         </div>
       ))}
     </div>
