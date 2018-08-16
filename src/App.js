@@ -2,8 +2,15 @@ import React, { Component } from "react";
 import "./App.css";
 import Helmet from "react-helmet";
 import ImageGrid from "./components/ImageGrid/ImageGrid";
+import SwfGrid from "./components/SwfGrid/SwfGrid";
 
 const images = require("./imageRefs.json");
+
+const constants = {
+  swf: "swiffy",
+  jpeg: "jpeg",
+  png: "png"
+};
 
 const getImages = selected => {
   return images.imageRefs.filter(({ content_type }) => {
@@ -43,7 +50,11 @@ class App extends Component {
             swiffy
           </button>
         </nav>
-        <ImageGrid images={images} />
+        {this.state.selected === constants.swf ? (
+          <SwfGrid images={images} />
+        ) : (
+          <ImageGrid images={images} />
+        )}
       </div>
     );
   }
