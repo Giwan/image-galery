@@ -1,5 +1,5 @@
-import React from "react";
-import "./ImageGrid.css";
+import React from 'react';
+import './ImageGrid.css';
 
 const ImageGrid = ({ images = [] }) => (
   <div className="container">
@@ -15,9 +15,12 @@ const ImageGrid = ({ images = [] }) => (
           >
             <img
               src={`https://nl.knowblearticles.com/rest/imagesrv/${entry_id}/${file_name}`}
-              alt=""
+              alt={file_name}
             />
           </a>
+          <span>
+            {entry_id}/{file_name}
+          </span>
         </div>
       ))}
     </div>
